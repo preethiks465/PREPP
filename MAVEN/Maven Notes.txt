@@ -1,0 +1,8 @@
+Maven is Build Automation Tool..Generates Build
+No need to download and configure the jar files into our project (like for selenium,TestNG,Apache poi etc.,) .. 
+All these jars can be used in the form of dependencies which are present in Maven Centralized repository over internet
+For eg: Thought works people has kept the Selenium dependencies into the Maven Centralized repository
+Maven will send the request to the centralized repository in the form of dependencies.
+In Dependencies we have 3 attributes : groupId,artifactID and version number
+All the dependencies downloaded from the Maven centralized repository gets stored locally in .m2 repository
+Maven repository can be created private to specific companies

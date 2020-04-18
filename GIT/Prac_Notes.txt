@@ -1,0 +1,36 @@
+Scenario 1:
+===========
+Developed a maven project in eclipse and need to upload the files to github: 
+(Create a empty repo in the git hub - https://github.com/preethiks465/POM_Latest.git)
+--------------------------------------------------------------------------------------
+1.Go to the folder where the maven project resides (C:\Users\PreethikrishnaSankur\PREP\OOP_POM)
+2.Right click on the folder name OOP_POM and click on Git Bash here
+3.git init
+4.git status
+5.git add .
+6.git commit -m "some comment"
+7.git remote add origin https://github.com/preethiks465/POM_Latest.git 
+8.git push -u origin master
+
+Make some changes in eclipse and then :
+
+git status
+git add .
+git commit -m "updated"
+git push -u origin master
+
+Scenario 2:
+===========
+pulling the code from git hub :
+-------------------------------
+1.Go to some local location D:\PERSONAL\PREP\GIT and give git clone https://github.com/preethiks465/POM_Latest.git
+2.Make some changes in the src
+3.git status
+4.git add .
+5.git commit -m "afsjdfhsjdf"
+6.git push -u origin master
+
+
+==========================================================
+Before committing the changes..take update from github 
+git pull origin master

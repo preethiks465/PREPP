@@ -1,0 +1,16 @@
+What is the initial capacity of the string builder in the example given below?
+
+StringBuilder sb = new StringBuilder("top 30 Java String interview questions   .");
+
+sb.length()+16
+-----------------------------------------------
+Which of the following statement would correctly convert String to byte array and vice versa?
+Use String getBytes() method to convert String to byte array and String constructor new String(byte[] arr) to convert back to String.
+-------------------------------------------------
+Which of the following correctly describes the result of the below line of code in Java?
+
+String[] strArray = aString.split("\s+");
+It'll split the string with white space characters such as ” “, “\t”, “\r”, “\n”.
+---------------------------------------------------
+
+https://www.programcreek.com/2013/04/why-string-is-immutable-in-java/  ---  REASONS FOR STRING IMMUTABILITY

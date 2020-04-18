@@ -1,0 +1,69 @@
+HTTP is unsecured while HTTPS is secured. HTTP sends data over port 80 while HTTPS uses port 443. HTTP operates at application layer, while HTTPS operates at transport layer. No SSL certificates are required for HTTP, with HTTPS it is required that you have an SSL certificate and it is signed by a CA.
+
+Authorization: Carries credentials containing the authentication information of the client for the resource being requested.
+
+WWW-Authenticate: This is sent by the server if it needs a form of authentication before it can respond with the actual resource being requested. Often sent along with a response code of 401, which means ‘unauthorized’.
+
+Accept-Charset: This is a header which is set with the request and tells the server about which character sets are acceptable by the client.
+
+Content-Type:  Indicates the media type (text/html or text/JSON) of the response sent to the client by the server, this will help the client in processing the response body correctly.
+
+Cache-Control: This is the cache policy defined by the server for this response, a cached response can be stored by the client and re-used till the time defined by the Cache-Control header.
+
+
+
+In Postman, select an API method.
+Click the Authorization tab.
+Choose OAuth 2.0 and add the following information from the table below.
+Click Get access token.
+Postman starts the authentication flow and prompts you to save the access token.
+Select Add token to header.
+Click the name of your token so Postman will add the token to the authorization header and click Send to make your request.
+If authentication is successful, the API shows a 200/OK response.
+Field	Value
+Authorization URL
+https://login.{environment}/oauth/authorize
+Access token URL
+https://login.{environment}/oauth/token
+Client ID
+PureCloud OAuth client ID
+Client secret
+PureCloud OAuth client secret
+Scope
+Blank
+Token Name
+(Any name you want)
+Grant type
+Authorization Code or Client Credentials
+Request access token locally
+Ensure that this is not checked
+
+
+
+he <scope> element can take 6 values: compile, provided, runtime, test, system and import.
+
+This scope is used to limit the transitivity of a dependency, and also to affect the classpath used for various build tasks.
+
+compile
+
+This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects.
+
+provided
+
+This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime. For example, when building a web application for the Java Enterprise Edition, you would set the dependency on the Servlet API and related Java EE APIs to scope provided because the web container provides those classes. This scope is only available on the compilation and test classpath, and is not transitive.
+
+runtime
+
+This scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.
+
+test
+
+This scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.
+
+system
+
+This scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.
+
+import (only available in Maven 2.0.9 or later)
+
+This scope is only used on a dependency of type pom in the section. It indicates that the specified POM should be replaced with the dependencies in that POM's section. Since they are replaced, dependencies with a scope of import do not actually participate in limiting the transitivity of a dependency.

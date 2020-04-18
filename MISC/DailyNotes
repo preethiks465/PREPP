@@ -1,0 +1,4 @@
+stringBuildr/Buffer do not override equals method so it will not check content
+need practice:
+Equilateral triangle
+find divisors using sqrt

@@ -1,0 +1,12 @@
+TechBeamers:
+=============
+2.Class variables has a default value of 0 for int,false for boolean,null for object references.There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
+
+3.for (int index = 0; 1; index++) {
+            System.out.println("Welcome");
+            break;
+        }
+
+Throws Compile time error: TypeMismatch error
+
+--------------------------------------------------

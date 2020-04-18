@@ -1,0 +1,8 @@
+Class.forName("oracle.jdbc.driver.OracleDriver");
+Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","username","password");
+Statement stmt = con.createStatement();
+ResultSet rs = stmt.ExecuteQuery("select * from emp");
+while(rs.next()){
+syso(rs.getint(1)+" "+rs.getString(2));
+}
+con.close();
